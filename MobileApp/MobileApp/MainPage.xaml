@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.MainPage" BackgroundColor="Black">
+
+    <StackLayout Padding="10">
+        <Label x:Name="ab" Text="Global Care" FontSize="40" TextColor="#4899ea" HorizontalTextAlignment="Center"/>
+        <Entry x:Name="loginEntry" Placeholder="Username" Style="{StaticResource retportEntry}"/>
+        <Entry x:Name="passwordEntry" IsPassword="True" Placeholder="Password" Style="{StaticResource retportEntry}"/>
+        <Button Text="Login" Clicked="Login" Style="{StaticResource buttonsStyle}"/>
+        <Button Text="Don't have account? Register now" Clicked="Register" Style="{StaticResource buttonsStyle}"/>
+    </StackLayout>
+
+</ContentPage>

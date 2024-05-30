@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.Register" BackgroundColor="Black">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Entry x:Name="loginEntry" Placeholder="Username" Style="{StaticResource retportEntry}"/>
+            <Entry x:Name="emailEntry" Placeholder="E-mail" Style="{StaticResource retportEntry}"/>
+            <Entry x:Name="passwordEntry" IsPassword="True" Placeholder="Password" Style="{StaticResource retportEntry}"/>
+            <Entry x:Name="repeatedPasswordEntry" IsPassword="True" Placeholder="Repeat password" Style="{StaticResource retportEntry}"/>
+            <Button x:Name="reg" Text="Register" Clicked="RegisterAccount" Style="{StaticResource buttonsStyle}"/>
+            <Button Text="Already registered? Log in" Clicked="Login" Style="{StaticResource buttonsStyle}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MobileApp"
+             Title="Flyout Menu"
+             x:Class="MobileApp.FlyoutMenuPage" BackgroundColor="Black">
+    <StackLayout>
+        <Label Text="GlobalCare" FontAttributes="Bold" Padding="20" FontSize="25"/>
+        <ListView x:Name="flyoutlistview" x:FieldModifier="public">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type local:FlyoutPageItem}">
+                    <local:FlyoutPageItem Title="Posts" IconSource="posts.png" TargetPage="{x:Type local:Posts}"/>
+                    <local:FlyoutPageItem Title="Report" IconSource="report.png" TargetPage="{x:Type local:Report}"/>
+                    <local:FlyoutPageItem Title="Chats" IconSource="chats.png" TargetPage="{x:Type local:SelectChat}" IsChat="True"/>
+                    <local:FlyoutPageItem Title="Donation" IconSource="donation.png" TargetPage="{x:Type local:Donation}"/>
+                    <local:FlyoutPageItem Title="In danger" IconSource="report.png"  TargetPage="{x:Type local:Page2}"/>
+                    <local:FlyoutPageItem Title="Settings" IconSource="settings.png" TargetPage="{x:Type local:Setting}"/>
+                    <local:FlyoutPageItem Title="About us" IconSource="aboutus.png" TargetPage="{x:Type local:About}"/>
+                    <local:FlyoutPageItem Title="Log Out" IconSource="logout.png" IsLogOut="True"/>
+                </x:Array>
+            </ListView.ItemsSource>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="4*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Source="{Binding IconSource}"/>
+                            <Label Grid.Column="1" Text="{Binding Title}" Style="{StaticResource chatLabel}"/>
+                            
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+        
+    </StackLayout>
+</ContentPage>

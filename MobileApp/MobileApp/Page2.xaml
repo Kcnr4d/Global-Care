@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.Page2" BackgroundColor="Black">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label  Text="Co robić w sytuacjach zagrożenia ?" Style="{StaticResource titleStyle}"/>
+            <BoxView Style="{StaticResource lineStyle}" />
+            <Picker Title="Wybierz zagrożenie"
+                TitleColor="#4899ea" TextColor="White"
+                SelectedIndexChanged="OnPickerSelectedIndexChanged"
+                >
+
+                <Picker.Items>
+                    <x:String>Powódź</x:String>
+                    <x:String>Pożar</x:String>
+                    <x:String>Strzelanina w szkole</x:String>
+                    <x:String>Alarm bombowy</x:String>
+                    <x:String>Trzęsienie ziemi</x:String>
+                </Picker.Items>
+            </Picker>
+            <Label x:Name="behaviour" TextColor="White" FontSize="Medium"/>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.Posts">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Black" Padding="10">
+            <!-- Tytuł -->
+            <Label Text="Announcements" Style="{StaticResource titleStyle}"/>
+            <BoxView Style="{StaticResource lineStyle}"/>
+
+            <!-- Posty -->
+            <ListView x:Name="AnnouncementView" ItemsSource="{Binding Announcements}" ItemSelected="AnnouncementView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell ImageSource="{Binding Img}" Text="{Binding Title}" Detail="{Binding Content}" TextColor="#4899ea" DetailColor="White"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

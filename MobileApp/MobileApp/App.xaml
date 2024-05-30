@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.App">
+    <Application.Resources>
+        <!-- OGÓLNE -->
+        <!-- tytuły -->
+        <Style x:Key="titleStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="Margin" Value="0,10,0,20"/>
+            <Setter Property="CharacterSpacing" Value="0.8"/>
+        </Style>
+        <Style x:Key="lineStyle" TargetType="BoxView">
+            <Setter Property="HeightRequest" Value="1"/>
+            <Setter Property="BackgroundColor" Value="#4899ea"/>
+        </Style>
+        <Style x:Key="buttonsStyle" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="#4899ea"/>
+            <Setter Property="CornerRadius" Value="15"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="Margin" Value="10,20,10,0 "/>
+        </Style>
+
+        <!-- opis -->
+        <Style x:Key="descriptionStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="HorizontalTextAlignment" Value="Start"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Margin" Value="5,15,5,0"/>
+            <Setter Property="CharacterSpacing" Value="0.7"/>
+        </Style>
+        
+        <!-- settings -->
+        <Style x:Key="settingLabel" TargetType="Label">
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="HorizontalOptions" Value="Start"/>
+            <Setter Property="Padding" Value="10,0,10,10"/>
+        </Style>
+        <Style x:Key="settingSwitch" TargetType="Switch">
+            <Setter Property="OnColor" Value="Gray"/>
+            <Setter Property="ThumbColor" Value="#4899ea"/>
+            <Setter Property="HorizontalOptions" Value="End"/>
+        </Style>
+        
+        <!-- donation -->
+        <Style x:Key="donationLabel" TargetType="Label">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+            <Setter Property="TextColor" Value="White"/>
+        </Style>
+        <Style x:Key="donationProgres" TargetType="ProgressBar">
+            <Setter Property="ProgressColor" Value="#4899ea"/>
+        </Style>
+        
+        <!-- chat -->
+        <Style x:Key="chatLabel" TargetType="Label">
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="VerticalTextAlignment" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+        </Style>
+        
+        <!-- wiadomości -->
+        <Style x:Key="msgLabel" TargetType="Label">
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="VerticalTextAlignment" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="BackgroundColor" Value="White"/>
+        </Style>
+        
+        <!-- reports -->
+        <Style x:Key="reportLabel" TargetType="Label">
+            <Setter Property="TextColor" Value="#4899ea"/>
+            <Setter Property="FontSize" Value="Medium"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+        </Style>
+        <Style x:Key="retportEntry" TargetType="Entry">
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="PlaceholderColor" Value="White"/>
+        </Style>
+
+    </Application.Resources>
+</Application>

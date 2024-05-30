@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.Setting" BackgroundColor="Black">
+
+    <StackLayout Padding="10">
+        <Label Text="Settings" Style="{StaticResource titleStyle}"/>
+        <BoxView Style="{StaticResource lineStyle}" Margin="0,0,0,20"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Remember me" Style="{StaticResource settingLabel}"/>
+            <Switch x:Name="remember" PropertyChanged="remember_PropertyChanged" Style="{StaticResource settingSwitch}" Grid.Column="1"/>
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Enable biometrics" Style="{StaticResource settingLabel}"/>
+            <Switch x:Name="finger" PropertyChanged="finger_PropertyChanged" Style="{StaticResource settingSwitch}" Grid.Column="1"/>
+        </Grid>
+
+        <Button x:Name="logout" Clicked="LogOut" Text="Log out" Style="{StaticResource buttonsStyle}"/>
+    </StackLayout>
+</ContentPage>

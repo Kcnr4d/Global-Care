@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.About"
+             BackgroundColor="Black">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Black" Padding="10">
+            <Label Text="O aplikacji" Style="{StaticResource titleStyle}"/>
+            <BoxView Style="{StaticResource lineStyle}"/>
+            <Label Style="{StaticResource descriptionStyle}" Text="    Aplikacja powstała, aby wspomagać działania humanitarne. Znajdziecie tu między innymi: tablicę z postami z poszczególnych grup, czaty grupowe, oraz możliwość finansowego wsparcia interesujących was zbiórek."/>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

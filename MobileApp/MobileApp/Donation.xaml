@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.Donation" BackgroundColor="Black">
+    <ContentPage.Content>
+
+        <StackLayout Padding="10">
+            <!-- opcja 1 -->
+            <Label Text="Donate to Support" Style="{StaticResource donationLabel}"/>
+            <CollectionView ItemsSource="{Binding Don}">
+                <CollectionView.ItemTemplate >
+                    <DataTemplate>
+                        <StackLayout>
+                            <Image Source="{Binding dot}"/>
+                            <ProgressBar Progress="{Binding amm}" Style="{StaticResource donationProgres}"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            
+            <Label Text="Credit Card Information" Style="{StaticResource donationLabel}"/>
+            
+            <Entry x:Name="cardNumber" Placeholder="Card Number" Style="{StaticResource retportEntry}"/>
+            <Entry x:Name="expirationYear" Placeholder="Expiration year" Style="{StaticResource retportEntry}"/>
+            <Entry x:Name="expirationMonth" Placeholder="Expiration month" Style="{StaticResource retportEntry}"/>
+            <Entry x:Name="cvc" Placeholder="CVC" Style="{StaticResource retportEntry}"/>
+            <Label/>
+            <Label/>
+            <Entry x:Name="donationEntry" Placeholder="Enter donation amount" Keyboard="Numeric" Style="{StaticResource retportEntry}"/>
+            <Button Text="Donate" Clicked="Donate" Style="{StaticResource buttonsStyle}"/>
+
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

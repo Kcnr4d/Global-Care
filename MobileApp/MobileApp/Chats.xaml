@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.Chats" BackgroundColor="Black">
+    <ContentPage.Content>
+        
+            <StackLayout Padding="10">
+                <CollectionView ItemsSource="{Binding ChatItems}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout VerticalOptions="Center">
+                            <Frame BorderColor="#4899ea" CornerRadius="15" HeightRequest="20" Margin="3">
+                                    <Label Text="{Binding Message}" Style="{StaticResource msgLabel}"/>
+                                </Frame>
+                        </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            <Entry x:Name="entrymsg" Placeholder="Wiadomość" Style="{StaticResource retportEntry}"/>
+                <Button Text="Send" Clicked="Send" Style="{StaticResource buttonsStyle}"/>
+            </StackLayout>
+            
+    </ContentPage.Content>
+</ContentPage>

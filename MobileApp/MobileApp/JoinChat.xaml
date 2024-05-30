@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.JoinChat" BackgroundColor="Black">
+    <ContentPage.Content>
+        <Grid Padding="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="9*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <ScrollView>
+                <StackLayout>
+                    <ListView x:Name="listView" ItemSelected="listView_ItemSelected">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout VerticalOptions="Center">
+                                        <Label Text="{Binding Name}" Style="{StaticResource chatLabel}"/>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </ScrollView>
+            <StackLayout Orientation="Horizontal" Grid.Row="1">
+                <Button Clicked="Create" Text="Create a group" Style="{StaticResource buttonsStyle}"/>
+                <Entry x:Name="grName" HorizontalOptions="FillAndExpand" Placeholder="Group name" Style="{StaticResource retportEntry}"/>
+            </StackLayout>
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

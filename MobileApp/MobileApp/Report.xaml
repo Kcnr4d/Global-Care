@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.Report">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Black" Padding="10">
+            <Label Text="Post" Style="{StaticResource titleStyle}"/>
+            <BoxView Style="{StaticResource lineStyle}" Margin="0,0,0,10"/>
+            
+            <Label Text="Name: *" Style="{StaticResource reportLabel}"/>
+            <Entry x:Name="groupName" Placeholder="Name" Style="{StaticResource retportEntry}"/>
+
+            <Label Text="Location: *" Style="{StaticResource reportLabel}"/>
+            <Entry x:Name="location" Placeholder="Location" Style="{StaticResource retportEntry}"/>
+
+            <Label Text="Opisz problem: *" Style="{StaticResource reportLabel}"/>
+            <Entry x:Name="description" Placeholder="Description" Style="{StaticResource retportEntry}"/>
+            
+            <Button x:Name="addAnnouncement" Text="Post" Clicked="addAnnouncement_Clicked" Style="{StaticResource buttonsStyle}"/>
+            
+            <Label Text="*Required" TextColor="Gray"/>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
