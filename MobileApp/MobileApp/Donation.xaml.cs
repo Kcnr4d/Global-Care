@@ -77,7 +77,7 @@ namespace MobileApp
         {
             try
             {
-                StripeConfiguration.SetApiKey("sk_test_51OIjqeKOHtz9TPhMr2z7GAZlstjtm9OmtPRMDa2QU572A1os7p3ll07SlqjlZW7yuWmy41xqWsLXqfPNkmvXUO3J00n3pVK1Pk");
+                StripeConfiguration.SetApiKey("STRIPE_API");
                 var options = new ChargeCreateOptions
                 {
                     Amount = (long)float.Parse(donationEntry.Text),
