@@ -6,7 +6,9 @@ Chats.xaml.cs; Donation.xaml.cs; => replace "FIREBASE_API" with Firebase Realtim
 Donation.xaml.cs => replace "STRIPE_API" with stripe.net API key (test or live)<br />
 Donation.xaml.cs => replace "RECEIVER_EMAIL" with stripe account email, which is dedicated to receive money<br />
 
-
+<br />
+<br />
+<br />
 Aby wpełni korzystać z funkcjonalności aplikacji należy dokonać zmian w plikach: <br />
 <br />
 google-services.json => umieścić dane do połączenia z bazą Firebase<br />
